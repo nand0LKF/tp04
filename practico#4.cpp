@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-
+//GITHUB  ---->https://github.com/nand0LKF/tp04.git
 using namespace std;
 
 // Declaracion de vectores globales
@@ -75,9 +75,9 @@ void calcular() {
 
     // Evaluar el estado (aprobado o reprobado)
     if (promedio >= 51) {
-        cout << "Estado: Aprobado" << endl;
+        cout << " " << endl;
     } else {
-        cout << "Estado: Reprobado" << endl;
+        cout << " " << endl;
     }
 }
 
@@ -152,4 +152,3 @@ int main() {
 
     return 0;
 }
-

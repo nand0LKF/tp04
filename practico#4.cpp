@@ -2,22 +2,22 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-//github https://github.com/nand0LKF/tp04.git
+
 using namespace std;
 
-// Declaración de vectores globales
+// Declaracion de vectores globales
 vector<string> nombres;
 vector<string> apellidos;
 vector<string> contrasenas;
 vector<int> notas;
 
-// Función para ofuscar nombres y apellidos
+// Funcion para ofuscar nombres y apellidos
 void ofuscar() {
     for (int i = 0; i < 10; i++) {
         string nombreOfuscado = nombres[i];
         string apellidoOfuscado = apellidos[i];
 
-        // Código de ofuscación según las reglas dadas
+        // Codigo de ofuscacion segun las reglas dadas
         replace(nombreOfuscado.begin(), nombreOfuscado.end(), 'A', '4');
         replace(nombreOfuscado.begin(), nombreOfuscado.end(), 'a', '4');
         replace(nombreOfuscado.begin(), nombreOfuscado.end(), 'E', '3');
@@ -48,9 +48,9 @@ void ofuscar() {
     }
 }
 
-// Función para calcular promedio
+// Funcion para calcular estadisticas
 void calcular() {
-    // Calcular promedio, mayor y menor aquí
+    // Calcular promedio, mayor y menor aqui
     double promedio = 0.0;
     int suma = 0;
     int mayor = notas[0];
@@ -68,28 +68,28 @@ void calcular() {
 
     promedio = static_cast<double>(suma) / 10.0;
 
-    // para imprimir resultados
+    // Imprimir resultados
     cout << "Promedio de nota es: " << promedio << endl;
     cout << "Mayor: " << mayor << endl;
     cout << "Menor: " << menor << endl;
 
     // Evaluar el estado (aprobado o reprobado)
     if (promedio >= 51) {
-        cout << "" << endl;
+        cout << "Estado: Aprobado" << endl;
     } else {
-        cout << "" << endl;
+        cout << "Estado: Reprobado" << endl;
     }
 }
 
-// Función para imprimir datos
+// Funcion para imprimir datos
 void imprimir() {
-    cout << "Nombre\tApellido\tNota\tContraseña" << endl;
+    cout << "Nombre\tApellido\tNota\tContrasena" << endl;
     for (int i = 0; i < 10; i++) {
         cout << nombres[i] << "\t" << apellidos[i] << "\t" << notas[i] << "\t" << contrasenas[i] << endl;
     }
 }
 
-// Función principal
+// Funcion principal
 int main() {
     // Inicializar vectores
     nombres = {"Alejandro", "Sofia", "Lucas", "Valentina", "Mateo", "Emma", "Nicolas", "Isabella", "Daniel", "Camila"};
@@ -105,32 +105,32 @@ int main() {
     char opcion;
 
     do {
-        // Mostrar menú
-        cout << "MENÚ Trabajo Practico 4" << endl;
-        cout << "(1)–Llenar nombres, apellidos y notas de forma aleatoria." << endl;
-        cout << "(2)–Ofuscar nombres y apellidos para llenar las contraseñas." << endl;
-        cout << "(3)–Sacar la media, el mayor y menor de todas las notas." << endl;
-        cout << "(4)–Imprimir datos." << endl;
-        cout << "(s/S) – Salir" << endl;
+        // Mostrar menu
+        cout << "MENU Trabajo Practico 4" << endl;
+        cout << "(1) - Llenar nombres, apellidos y notas de forma aleatoria." << endl;
+        cout << "(2) - Ofuscar nombres y apellidos para llenar las contrasenas." << endl;
+        cout << "(3) - Sacar la media, el mayor y menor de todas las notas." << endl;
+        cout << "(4) - Imprimir datos." << endl;
+        cout << "(s/S) - Salir" << endl;
 
         cin >> opcion;
 
-        // Evaluar opción ingresada
+        // Evaluar opcion ingresada
         switch (opcion) {
             case '1':
-                // Llenar nombres, apellidos y notas con valores específicos
-                // Aquí se puede pedir al usuario ingresar datos o dejarlos fijos
+                // Llenar nombres, apellidos y notas con valores especificos
+                // Aqui se puede pedir al usuario ingresar datos o dejarlos fijos
                 break;
 
             case '2':
-                // Ofuscar nombres y apellidos para llenar las contraseñas
+                // Ofuscar nombres y apellidos para llenar las contrasenas
                 ofuscar();
-                cout << "Contraseñas generadas." << endl;
+                cout << "Contrasenas generadas." << endl;
                 break;
 
             case '3':
                 // Sacar la media, el mayor y menor de todas las notas
-                // Imprimir datos llamando a la función de imprimir
+                // Imprimir datos llamando a la funcion de imprimir
                 imprimir();
                 calcular();
                 break;
@@ -145,10 +145,11 @@ int main() {
                 break;
 
             default:
-                cout << "Opción inválida" << endl;
+                cout << "Opcion invalida" << endl;
         }
 
     } while (opcion != 's' && opcion != 'S');
 
     return 0;
 }
+

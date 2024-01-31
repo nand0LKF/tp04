@@ -48,7 +48,7 @@ void ofuscar() {
     }
 }
 
-// Función para calcular estadísticas
+// Función para calcular promedio
 void calcular() {
     // Calcular promedio, mayor y menor aquí
     double promedio = 0.0;
@@ -68,7 +68,7 @@ void calcular() {
 
     promedio = static_cast<double>(suma) / 10.0;
 
-    // Imprimir resultados
+    // para imprimir resultados
     cout << "Promedio de nota es: " << promedio << endl;
     cout << "Mayor: " << mayor << endl;
     cout << "Menor: " << menor << endl;
@@ -119,7 +119,7 @@ int main() {
         switch (opcion) {
             case '1':
                 // Llenar nombres, apellidos y notas con valores específicos
-                // Aquí podrías pedir al usuario ingresar datos o dejarlos fijos como en tu versión anterior
+                // Aquí se puede pedir al usuario ingresar datos o dejarlos fijos
                 break;
 
             case '2':
